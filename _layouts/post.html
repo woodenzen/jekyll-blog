@@ -1,0 +1,15 @@
+---
+layout: "wrapper"
+author: "Will"
+---
+Making a navigation list <br>
+And coloring the active link <br>
+
+{% for post in site.posts %}
+<li><a style="{% if page.url == post.url %}color:red;{% endif %}" href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+
+<h2>{{ page.title }}</h2>
+<h3>{{ layout.author }}</h3>
+<hr>
+{{ content }}
